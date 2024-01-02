@@ -8,18 +8,18 @@ namespace ContactPro.Models
     public class Contact
     {
         public int Id { get; set; }
-        [Required]
         
+        [Required]
         public string? AppUserId { get; set; }
         
         [Required]
         [Display(Name = "First Name")]
-        [StringLength(50, ErrorMessage = " The {0} must be at leat {2} and a max of {1} chracters long.", MinimumLength = 2)]
+        [StringLength(50, ErrorMessage = " The {0} must be at least {2} and a max of {1} chracters long.", MinimumLength = 2)]
         public string? FirstName { get; set; }
 
         [Required]
         [Display(Name = "Last Name")]
-        [StringLength(50, ErrorMessage = " The {0} must be at leat {2} and a max of {1} long.", MinimumLength = 2)]
+        [StringLength(50, ErrorMessage = " The {0} must be at least {2} and a max of {1} characters long.", MinimumLength = 2)]
         public string? LastName { get; set; }
 
         [NotMapped]
@@ -50,7 +50,7 @@ namespace ContactPro.Models
 
         [Required]
         [Display(Name = "Phone Numeber")]
-        public string PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
